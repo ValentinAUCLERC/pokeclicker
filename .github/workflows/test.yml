@@ -19,5 +19,5 @@ jobs:
     name: Annotates pull request with metadata
     steps:     
       - name: ssh-branch-deploy
-        uses: ValentinAUCLERC/BranchDeploy@v0.1.4
+        uses: ValentinAUCLERC/BranchDeploy@v0.1.5
 
