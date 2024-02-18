@@ -1,0 +1,23 @@
+name: PR metadata annotation
+
+on:
+  issue_comment:
+    types: [created]
+
+# Permissions needed for reacting and adding comments for IssueOps commands
+permissions:
+  pull-requests: write
+  deployments: write
+  contents: write
+  checks: read
+
+
+jobs:
+  osef:
+    if: ${{ github.event.issue.pull_request }} # only run on pull request comments
+    runs-on: ubuntu-latest
+    name: Annotates pull request with metadata
+    steps:     
+      - name: ssh-branch-deploy
+        uses: ValentinAUCLERC/BranchDeploy@v0.1.5
+
