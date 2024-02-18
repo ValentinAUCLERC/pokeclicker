@@ -12,4 +12,3 @@ class BerryMasterShop extends Shop {
 
     public amountInput = () => $('#berryMasterModal').find('input[name="amountOfItems"]');
 }
-
